@@ -64,11 +64,15 @@ export default function Home() {
                 <p>{product.description}</p>
                 <div className="price">{product.price}</div>
                 <a
-                  className="btn"
-                  href="#contact"
-                >
-                  Enquire Now →
-                </a>
+  className="btn"
+  href={`https://wa.me/919334578433?text=${encodeURIComponent(
+    `Hi TAPORA! I'm interested in ${product.name}. Please share more details.`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Enquire on WhatsApp →
+</a>
               </div>
             ))}
           </div>
@@ -103,9 +107,14 @@ export default function Home() {
             Contact TAPORA for customised smart business cards
             and Google review stands.
           </p>
-          <a className="btn" href="mailto:hello@tapora.in">
-            Contact Us →
-          </a>
+          <a
+  className="btn"
+  href="https://wa.me/919334578433?text=Hi%20TAPORA!%20I%20want%20to%20know%20more%20about%20your%20products."
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Chat on WhatsApp →
+</a>
           <p style={{ marginTop: 15, color: "#777" }}>
             Serving businesses in Jamui, Bihar.
           </p>
