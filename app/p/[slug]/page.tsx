@@ -74,13 +74,20 @@ export default async function ProfilePage({
 
         <div style={styles.qrBox}>
           <p>SCAN TO OPEN PROFILE</p>
-          <img
-            src={qrUrl}
-            alt="TAPORA profile QR code"
-            width="180"
-            height="180"
-          />
-          <small>{profileUrl}</small>
+         <img
+  src={qrUrl}
+  alt="TAPORA profile QR code"
+  width="180"
+  height="180"
+  style={{ display: "block", margin: "12px auto" }}
+/>
+<small style={{
+  display: "block",
+  overflowWrap: "anywhere",
+  lineHeight: 1.5
+}}>
+  {profileUrl}
+</small> 
         </div>
 
         <p style={styles.footer}>
