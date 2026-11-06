@@ -253,3 +253,10 @@ const styles: Record<string, React.CSSProperties> = {
   textAlign: "center",
   overflow: "hidden",
 },
+
+footer: {
+  color: "#999",
+  fontSize: "12px",
+  marginTop: "25px",
+},
+};
