@@ -153,7 +153,16 @@ export default function ProfilePage() {
         <div style={styles.qrBox}>
           <p>SCAN TO OPEN PROFILE</p>
           <img src={qrUrl} alt="Business profile QR code" width="180" height="180" />
-          <small>{profileUrl}</small>
+          <small style={{
+  display: "block",
+  textAlign: "center",
+  overflowWrap: "anywhere",
+  wordBreak: "break-word",
+  lineHeight: 1.5,
+  marginTop: "12px"
+}}>
+  {profileUrl}
+</small>
         </div>
 
         <p style={styles.footer}>Powered by TAPORA · Smart Connections.</p>
@@ -237,14 +246,10 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: "12px",
   },
   qrBox: {
-    marginTop: "30px",
-    padding: "20px",
-    background: "#f4f2ed",
-    borderRadius: "12px",
-  },
-  footer: {
-    color: "#999",
-    fontSize: "12px",
-    marginTop: "25px",
-  },
-};
+  marginTop: "30px",
+  padding: "24px",
+  background: "#f4f5f0",
+  borderRadius: "12px",
+  textAlign: "center",
+  overflow: "hidden",
+},
