@@ -111,10 +111,25 @@ export default function Dashboard() {
   }
 
   function editProfile(profile: Profile) {
-    setForm({ ...emptyForm, ...profile });
-    setEditingId(profile.id);
-    setMessage("");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  setForm({
+    ...emptyForm,
+    id: profile.id,
+    slug: profile.slug,
+    business_name: profile.business_name,
+    category: profile.category ?? "",
+    description: profile.description ?? "",
+    whatsapp: profile.whatsapp ?? "",
+    instagram_url: profile.instagram_url ?? "",
+    google_review_url: profile.google_review_url ?? "",
+    website_url: profile.website_url ?? "",
+    location: profile.location ?? "",
+    logo_url: profile.logo_url ?? "",
+    is_published: profile.is_published,
+  });
+
+  setEditingId(profile.id);
+  setMessage("");
+  window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function newProfile() {
